@@ -31,3 +31,5 @@ export function evenness() {
         else if (i === 3) return `Let's try again, ${userName}!`
     }
 }
+
+console.log(evenness());

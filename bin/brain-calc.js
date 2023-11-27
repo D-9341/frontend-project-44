@@ -41,3 +41,5 @@ export function calculator() {
         else if (i === 3) return `Let's try again, ${userName}!`
     }
 }
+
+console.log(calculator());
