@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import readlineSync from 'readline-sync';
 
 import { getName } from "../src/cli.js";
@@ -14,13 +16,20 @@ export function evenness() {
         if (num % 2 === 0) {
             if (answer === 'yes') {
                 console.log('Correct!')
-            } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`)
+            } else {
+                console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.`)
+                i = 3
+            }
         } else if (num % 2 !== 0) {
             if (answer === 'no') {
                 console.log('Correct!')
-            } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`)
+            } else {
+                console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.`)
+                i = 3
+            }
         }
         if (i === 2) return `Congratulations, ${userName}!`
+        else if (i === 3) return `Let's try again, ${userName}!`
     }
 }
 
