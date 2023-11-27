@@ -3,4 +3,5 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/878cfd0e34dcdeb6c3c9/maintainability)](https://codeclimate.com/github/D-9341/frontend-project-44/maintainability)
 
-https://asciinema.org/a/PNHsVZVg3lLpcbcePAwZgIuNc
+https://asciinema.org/a/PNHsVZVg3lLpcbcePAwZgIuNc - brain-even
+
