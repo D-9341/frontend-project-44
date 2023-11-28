@@ -20,7 +20,7 @@ export function progression() {
       }
     }
     const toReplace = final.splice(index, 1, '..');
-    console.log(`Question: ${final}`);
+    console.log(`Question: ${final.join(' ')}`);
     const answer = readlineSync.question('Your answer: ');
     if (Number(answer) === Number(toReplace)) {
       console.log('Correct!');
