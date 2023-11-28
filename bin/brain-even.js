@@ -6,12 +6,12 @@ import { getName } from "../src/cli.js";
 
 export function evenness() {
     console.log('Welcome to the Brain Games!');
-    var userName = getName()
+    let userName = getName()
     console.log(`Hello, ${userName}!\nAnswer "yes" if the number is even, otherwise answer "no".`);
     for (let i = 0; i < 3; i += 1) {
-        var num = Math.round(Math.random() * 100)
+        let num = Math.round(Math.random() * 100)
         console.log(`Question: ${num}`);
-        var answer = readlineSync.question('Your answer: ')
+        let answer = readlineSync.question('Your answer: ')
         if (num % 2 === 0) {
             if (answer === 'yes') {
                 console.log('Correct!')

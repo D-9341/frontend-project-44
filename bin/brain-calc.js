@@ -6,15 +6,15 @@ import { getName } from "../src/cli.js";
 
 export function calculator() {
     console.log('Welcome to the Brain Games!');
-    var userName = getName()
+    let userName = getName()
     console.log(`Hello, ${userName}!\nWhat is the result of the expression?`);
     for (let i = 0; i < 3; i += 1) {
-        var first = Math.round(Math.random() * 10)
-        var second = Math.round(Math.random() * 10)
-        var choices = ['+', '-', '*']
-        var choice = choices[Math.floor(choices.length * Math.random())]
+        let first = Math.round(Math.random() * 10)
+        let second = Math.round(Math.random() * 10)
+        let choices = ['+', '-', '*']
+        let choice = choices[Math.floor(choices.length * Math.random())]
         console.log(`Question: ${first} ${choice} ${second}`);
-        var answer = readlineSync.question('Your answer: ')
+        let answer = readlineSync.question('Your answer: ')
         if (choice === '+') {
             if (first + second === Number(answer)) {
                 console.log('Correct!');
