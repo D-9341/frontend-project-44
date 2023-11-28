@@ -26,11 +26,13 @@ export function primeNumber() {
         console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.`);
         i = 3;
       }
-    } else if (answer === 'no') {
-      console.log('Correct!');
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.`);
-      i = 3;
+      if (answer === 'no') {
+        console.log('Correct!');
+      } else {
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.`);
+        i = 3;
+      }
     }
     if (i === 2) return `Congratulations, ${userName}!`;
     if (i === 3) return `Let's try again, ${userName}!`;
