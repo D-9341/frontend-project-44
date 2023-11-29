@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "[![Actions Status](https://github.com/D-9341/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/D-9341/frontend-project-44/actions)",
   "main": "index.js",
   "type": "module",
@@ -11,11 +11,11 @@
   "license": "ISC",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js",
-    "brain-gcd": "bin/brain-gcd.js",
-    "brain-progression": "bin/brain-progression.js",
-    "brain-prime": "bin/brain-prime.js"
+    "brain-even": "games/brain-even.js",
+    "brain-calc": "games/brain-calc.js",
+    "brain-gcd": "games/brain-gcd.js",
+    "brain-progression": "games/brain-progression.js",
+    "brain-prime": "games/brain-prime.js"
   },
   "dependencies": {
     "eslint-config-airbnb-base": "^15.0.0",

@@ -1,14 +1,8 @@
-#!/usr/bin/env node
-
 import readlineSync from 'readline-sync';
 
-import { getName } from '../src/cli.js';
-
-export function progression() {
-  console.log('Welcome to the Brain Games!');
-  const userName = getName();
-  let final = [];
+export function progressionLogic(userName) {
   console.log(`Hello, ${userName}!\nWhat number is missing in the progression?`);
+  let final = [];
   for (let i = 0; i < 3; i += 1) {
     const progress = Math.floor(Math.random() * 10);
     const index = Math.floor(Math.random() * 10);
@@ -26,12 +20,9 @@ export function progression() {
       console.log('Correct!');
       final = [];
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${toReplace}'.`);
-      i = 3;
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${toReplace}'.\nLet's try again, ${userName}!`);
+      break;
     }
-    if (i === 2) return `Congratulations, ${userName}!`;
-    if (i === 3) return `Let's try again, ${userName}!`;
+    if (i === 2) return console.log(`Congratulations, ${userName}!`);
   }
 }
-
-console.log(progression());
