@@ -1,4 +1,4 @@
-import { getName } from './cli.js';
+import getName from './cli.js';
 
 console.log('Welcome to the Brain Games!');
 const userName = getName();

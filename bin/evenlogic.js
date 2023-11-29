@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export function evenLogic(userName) {
+function evenLogic(userName) {
   console.log(`Hello, ${userName}!\nAnswer "yes" if the number is even, otherwise answer "no".`);
   for (let i = 0; i < 3; i += 1) {
     const num = Math.round(Math.random() * 100);
@@ -21,4 +21,7 @@ export function evenLogic(userName) {
     }
     if (i === 2) return console.log(`Congratulations, ${userName}!`);
   }
+  return false;
 }
+
+export default evenLogic;

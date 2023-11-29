@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export function calcLogic(userName) {
+function calcLogic(userName) {
   console.log(`Hello, ${userName}!\nWhat is the result of the expression?`);
   for (let i = 0; i < 3; i += 1) {
     const first = Math.round(Math.random() * 10);
@@ -33,4 +33,7 @@ export function calcLogic(userName) {
     }
     if (i === 2) return console.log(`Congratulations, ${userName}!`);
   }
+  return false;
 }
+
+export default calcLogic;

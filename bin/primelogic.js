@@ -7,7 +7,7 @@ function isPrime(num) {
   return num > 1;
 }
 
-export function primeLogic(userName) {
+function primeLogic(userName) {
   console.log(`Hello, ${userName}!\nAnswer "yes" if given number is prime. Otherwise answer "no".`);
   for (let i = 0; i < 3; i += 1) {
     const number = Math.floor(Math.random() * 100);
@@ -20,14 +20,15 @@ export function primeLogic(userName) {
         console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`);
         break;
       }
+    } else if (answer === 'no') {
+      console.log('Correct!');
     } else {
-      if (answer === 'no') {
-        console.log('Correct!');
-      } else {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
-        break;
-      }
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
+      break;
     }
     if (i === 2) return console.log(`Congratulations, ${userName}!`);
   }
+  return false;
 }
+
+export default primeLogic;

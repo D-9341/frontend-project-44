@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export function greatestCommonDivisorLogic(userName) {
+function greatestCommonDivisorLogic(userName) {
   console.log(`Hello, ${userName}!\nFind the greatest common divisor of given numbers.`);
   for (let i = 0; i < 3; i += 1) {
     let first = Math.round(Math.random() * 10);
@@ -24,4 +24,7 @@ export function greatestCommonDivisorLogic(userName) {
     }
     if (i === 2) return console.log(`Congratulations, ${userName}!`);
   }
+  return false;
 }
+
+export default greatestCommonDivisorLogic;

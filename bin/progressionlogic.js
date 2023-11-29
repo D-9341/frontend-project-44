@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export function progressionLogic(userName) {
+function progressionLogic(userName) {
   console.log(`Hello, ${userName}!\nWhat number is missing in the progression?`);
   let final = [];
   for (let i = 0; i < 3; i += 1) {
@@ -25,4 +25,7 @@ export function progressionLogic(userName) {
     }
     if (i === 2) return console.log(`Congratulations, ${userName}!`);
   }
+  return false;
 }
+
+export default progressionLogic;
